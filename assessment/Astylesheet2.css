@@ -1,0 +1,117 @@
+/*ASTYLESHEET2*/
+
+body {
+    
+    font-family: sans-serif;
+    font-size: 0.9em;
+    color: #444;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.TopSection{
+  
+}
+
+.Search{
+  float: right;
+  
+}
+
+.MidTop{
+  display:block;
+  position:relative;
+  width:100%;
+}
+
+.mynav{
+  float: left;
+  background-color: rgba(29, 88, 214, 1);
+  width:27.2%;
+  height:54%;
+  font-size: 30pt;
+  padding-top:0;
+  text-align: left;
+  color: white;
+}
+
+.bckgrndimg{
+  float:right;
+}
+
+.TopBot{
+  display:inline;
+  width: auto;
+  text-align: left;
+  
+}
+.AreaD{
+  float: left;
+  
+}
+
+.article{
+  float:left;
+  text-align: left;
+}
+
+.QuickC{
+  float:left;
+  
+  }
+
+.BotTop{
+  display:block;
+}
+
+.welcome{
+  float:left;
+  width:60%;
+}
+
+.MediaL{
+  float: right;
+  margin-right: 250px;
+  color:white;
+}
+
+.BotBot{
+  
+}
+.SiteM{
+  float:left;
+}
+
+.AboutF{
+  float:left;
+}
+
+.OffCon{
+  float: left;
+}
+
+h1{
+  background-color: rgba(29, 88, 214, 1);
+  color: white;
+  transform: rotate(-90deg);
+  float:left;
+  /*font-size: pt;
+  text-align: right;
+  margin-top: 100px;
+  margin-left: -120;*/
+}
+
+.head1{
+  margin-left: -135px;
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+
