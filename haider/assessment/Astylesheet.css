@@ -1,0 +1,80 @@
+
+
+
+
+body {
+  
+    font-family: sans-serif;
+    font-size: 0.7em;
+    color: #444;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  
+}
+
+.container {
+  width: 100%;
+  display: block;
+  background-color: red;
+}
+
+.TopSection{
+ top: 100;
+  /*display: inline;*/
+  
+}
+
+.MidTop{
+  /*display: inline;*/
+}
+
+.TopBot{
+  display: block;
+  top:2000;
+  
+}
+
+.logo {
+  float: left;
+}
+
+.Search {
+  top:20;
+  float: right;
+  padding 100px;
+}
+
+.NavBar {
+  color:white;
+  /*position: absolute;
+  float: left;
+  top: 60;*/
+  background-color: rgba(0, 89, 179, 0.8);
+  border-right: 1px solid #000000;
+  width: 17%;
+  height: 35%;
+  text-align: left;
+  font-size: 15pt;
+  line-height: 28pt;
+  padding: 1px;
+  display: inline-block;
+  
+}
+
+.myNav {
+  display: inline-block;
+  float: left;
+}
+
+.bckgrndimg { 
+ margin-top:58;
+  float:right;
+  right: 50;
+  
+}
+
+.AOED{
+  top:200;
+}

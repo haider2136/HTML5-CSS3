@@ -1,0 +1,105 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This is a tax calculator Website">
+  
+  </head>
+  <body>
+  <h1>Salary and Tax Calculator</h1>
+ <input id="input1" type="number"/><br>
+  <input type="button" id="button1" value="Calculate"/>
+  <h2></h2>
+    <table>
+  <tr>
+    <td>Gross Salary</td>
+    <td id="GS">-</td>
+  </tr>
+  <tr>
+    <td>Personal Allowance</td>
+    <td id="PA">-</td>
+  </tr>
+  <tr>
+    <td>Tax Bracket</td>
+    <td id="TB">-</td>
+  </tr>
+     <tr>
+    <td>Total Tax Paid</td>
+    <td id="TTP">-</td>
+  </tr>
+     <tr>
+    <td>Your Net Salary</td>
+    <td  id="YNS">-</td>
+  </tr>
+    </table>
+   <div id="chartContainer"></div>
+    <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script>
+    document.getElementById("button1").onclick = function () {
+      var Salary = document.getElementById("input1").value;
+      var TTaxPaid;
+      var YNetS;
+       
+      if (Salary < 45000) {
+        var Num2 = Salary-11500
+        TTaxPaid = Num2*0.2  
+        var Num3 = Salary-TTaxPaid
+        document.getElementById("TTP").innerHTML = TTaxPaid;
+        document.getElementById("GS").innerHTML = Salary;
+        document.getElementById("PA").innerHTML = "11500";
+        document.getElementById("TB").innerHTML = "Basic rate";	
+        document.getElementById("YNS").innerHTML = Num3;
+        
+      } else if (Salary < 150000){
+        
+        var Num2 = Salary-11500
+        TTaxPaid = Num2*0.4  
+        var Num3 = Salary-TTaxPaid
+        document.getElementById("TTP").innerHTML = TTaxPaid;
+        document.getElementById("GS").innerHTML = Salary;
+        document.getElementById("PA").innerHTML = "11500";
+        document.getElementById("TB").innerHTML = "higher rate";	
+        document.getElementById("YNS").innerHTML = Num3;
+        
+      } else {
+        var Num2 = Salary-11500
+        TTaxPaid = Num2*0.45  
+        var Num3 = Salary-TTaxPaid
+        document.getElementById("TTP").innerHTML = TTaxPaid;
+        document.getElementById("GS").innerHTML = Salary;
+        document.getElementById("PA").innerHTML = "11500";
+        document.getElementById("TB").innerHTML = "Additional rate";	
+        document.getElementById("YNS").innerHTML = Num3;
+        
+        
+      }
+     
+      
+	   var chart = new CanvasJS.Chart("chartContainer", {
+		theme: "theme2",//theme1
+		title:{
+			text: "Your Tax Break Down"              
+		},
+		animationEnabled: false,   // change to true
+		data: [              
+		{
+			// Change type to "bar", "area", "spline", "pie",etc.
+			type: "pie",
+			dataPoints: [
+				{ label: "Net Salary",  y: Num3  },
+				{ label: "Tax Paid", y: TTaxPaid  }
+				
+			]
+		}
+		]
+	});
+	chart.render();
+    
+    
+    }
+    
+    </script>
+  </body>
+
+
+</html>

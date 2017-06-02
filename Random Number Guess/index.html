@@ -1,0 +1,41 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <title>Number Guess Game!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This is a random number guessing game">
+  </head>
+<body>
+  <h1>Guess the number between 1 and 10!</h1> 
+  
+  <input id="input1" type="number"/><br>
+  <input type="button" id="button" value="Guess"/>
+  <section id="MainSec">
+   <p id="Ans"></p>
+  </section>
+  <script>
+  /*document.getElementById("MainSec").innerHTML =   Math.floor((Math.random() * 10) + 1);*/
+    
+  /*var input = "input1";
+  var Num = Math.floor((Math.random() * 10) + 1);
+    console.log(Num)*/
+    var Num = Math.floor((Math.random() * 10) + 1); 
+    console.log(Num)
+    /*var input = document.getElementById("input1").value;
+    console.log(input)*/
+    document.getElementById("button").onclick = function() {
+       var input = document.getElementById("input1").value;
+       console.log(input)
+       
+       if (input == Num) { 
+         document.getElementById("Ans").innerHTML = "Well done – correct guess!";
+         } else{
+           document.getElementById("Ans").innerHTML = "guess again";
+           
+         };
+       
+       
+     }
+  </script>
+  </body>
+</html>
